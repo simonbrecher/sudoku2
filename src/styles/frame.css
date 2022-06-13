@@ -1,0 +1,81 @@
+.puzzle-table {
+            /* VARIABLES */
+
+    --square-fg-default: #000;
+    --square-fg-hover: #000;
+    --square-bg-default: #EEE;
+    --square-bg-hover: #DDD;
+
+    --border-width-0: 0px;
+    --border-width-1: 1px;
+    --border-width-2: 3px;
+    --border-style-0: solid;
+    --border-style-1: solid;
+    --border-style-2: solid;
+
+    --border-color-default: #000;
+
+    --relative-font-size: 0.7;
+
+            /* GLOBAL STYLES */
+
+    border-collapse: collapse;
+}
+
+.puzzle-cell {
+            /* SIZE */
+
+    --puzzle-cell-width: 50px;
+    --puzzle-cell-height: 50px;
+
+    width: var(--puzzle-cell-width);
+    height: var(--puzzle-cell-width);
+
+    --square-fg: var(--square-fg-default);
+    --square-bg: var(--square-bg-default);
+
+    color: var(--square-fg);
+    background-color: var(--square-bg);
+
+    padding: 0;
+
+            /* BORDER */
+
+    box-sizing: border-box;
+
+    --border-top-width: var(--border-width-0); /* default */
+    --border-bottom-width: var(--border-width-0); /* default */
+    --border-left-width: var(--border-width-0); /* default */
+    --border-right-width: var(--border-width-0); /* default */
+
+    --border-top-style: var(--border-style-0); /* default */
+    --border-bottom-style: var(--border-style-0); /* default */
+    --border-left-style: var(--border-style-0); /* default */
+    --border-right-style: var(--border-style-0); /* default */
+
+    --border-top-color: var(--border-color-default); /* default */
+    --border-bottom-color: var(--border-color-default); /* default */
+    --border-left-color: var(--border-color-default); /* default */
+    --border-right-color: var(--border-color-default); /* default */
+
+    border-top: var(--border-top-width) var(--border-top-style) var(--border-top-color);
+    border-bottom: var(--border-bottom-width) var(--border-bottom-style) var(--border-bottom-color);
+    border-left: var(--border-left-width) var(--border-left-style) var(--border-left-color);
+    border-right: var(--border-right-width) var(--border-right-style) var(--border-right-color);
+
+            /* TEXT */
+
+    font-size: calc(var(--puzzle-cell-height) * var(--relative-font-size));
+    line-height: var(--puzzle-cell-height);
+    text-align: center;
+}
+
+.puzzle-cell:hover {
+    --square-fg: var(--square-fg-hover);
+    --square-bg: var(--square-bg-hover);
+}
+
+.square {
+    width: 100%;
+    height: 100%;
+}
